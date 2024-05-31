@@ -38,6 +38,10 @@ const TodoPage = () => {
     dispatch(todosSlice.actions.editTodo(data));
   }
 
+  function toggle(data: Itodo): void {
+    dispatch(todosSlice.actions.editTodo({...data,status:!data.status}));
+  }
+
   function deleteTodo(todo: Itodo): void {
     dispatch(todosSlice.actions.deleteTodo(todo.no));
   }
@@ -88,7 +92,7 @@ const TodoPage = () => {
       </dialog>
 
       <div className="list-view">
-        {filteredTodos.map((todo: Itodo) => <TodoItem key={todo.no} todo={todo} onDelete={deleteTodo} onEdit={onEdit} ></TodoItem>)}
+        {filteredTodos.map((todo: Itodo) => <TodoItem key={todo.no} todo={todo} onDelete={deleteTodo} onEdit={onEdit}  onToggle={toggle} ></TodoItem>)}
 
       </div>
     </div>

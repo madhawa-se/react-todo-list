@@ -6,13 +6,14 @@ interface TodoItemProps {
     todo: Itodo;
     onEdit: (todo: Itodo) => void;
     onDelete: (todo: Itodo) => void;
+    onToggle:(todo: Itodo) => void
 }
 
-const TodoItem: React.FC<TodoItemProps> = ({ todo, onEdit, onDelete }) => {
+const TodoItem: React.FC<TodoItemProps> = ({ todo, onEdit, onDelete ,onToggle }) => {
     const { no, title, status } = todo;
 
     return (
-        <div className="todo-item">
+        <div className="todo-item" onClick={() =>onToggle(todo)}>
             <div className="flex justify-between items-center">
                 <div className="content">
                     <span className={`status-view mr-4 ${status ? 'done' : ''}`}>{status?"✔":""}</span>
