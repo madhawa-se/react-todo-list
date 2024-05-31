@@ -26,6 +26,25 @@ To run the app locally, follow these steps:
 
 
 
+# Instruction Manual: Using Todo Application
+
+## Adding Todo:
+- Click on "Add Todo" to open the form.
+- Fill in the details and submit the form to add a new todo.
+
+## Editing Todo:
+- To edit a todo, locate the buttons on the right side of each todo item.
+- Click on the edit button (pencil icon) corresponding to the todo you wish to edit.
+
+## Toggling Todo Status:
+- To toggle the status of a todo (done or not done), simply click on the todo item itself.
+
+* Green box indicates a "done" status, while a gray box indicates a "not done" status.
+
+
+
+
+
 # React TS todolist -  Description given
 
 ## Rules:
