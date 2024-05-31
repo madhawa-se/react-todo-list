@@ -1,4 +1,32 @@
-# React TS todolist
+# Todo List
+
+This is a Next.js based todo list application.
+
+## Demo
+
+You can access the [live demo of the app](https://react-todo-list-eosin.vercel.app/todo). The app is hosted on Vercel.
+
+## Tech Stack
+
+- Next.js
+- Redux
+- TypeScript
+- Tailwind CSS
+- SCSS
+
+## How to Run
+
+To run the app locally, follow these steps:
+
+1. Clone the repository.
+2. Navigate to the project directory in your terminal.
+3. Run `npm install` to install dependencies.
+4. Run `npm run dev` for development mode or `npm run build` for production build.
+
+
+
+
+# React TS todolist -  Description given
 
 ## Rules:
 - code should be located in repository (For instance: GitLab);
