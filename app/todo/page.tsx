@@ -3,9 +3,9 @@
 import TodoForm from "@/components/forms/add-todo-form";
 import AddTodoForm from "@/components/forms/add-todo-form";
 import TodoItem from "@/components/todo-Item";
-import { useAppDispatch, useAppSelector } from "@/lib/hooks";
+import { useAppDispatch, useAppSelector } from "@/store/lib/hooks";
 import { Itodo } from "@/models/todo-interface";
-import { todosSlice } from "@/store/slice/todo-slice";
+import { todosSlice } from "@/store/slices/todo-slice";
 import { useCallback, useState } from "react";
 import "./page.scss"
 

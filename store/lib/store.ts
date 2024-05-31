@@ -1,5 +1,5 @@
 
-import { todosSlice } from "@/store/slice/todo-slice";
+import { todosSlice } from "@/store/slices/todo-slice";
 import { configureStore, createSlice } from "@reduxjs/toolkit";
 
 export const makeStore = () => {
