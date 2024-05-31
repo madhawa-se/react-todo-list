@@ -9,6 +9,15 @@ const nextConfig = {
 
         return config
     },
+    async redirects() {
+        return [
+          {
+            source: '/',
+            destination: '/todo',
+            permanent: true,
+          },
+        ]
+      },
 };
 
 export default nextConfig;
