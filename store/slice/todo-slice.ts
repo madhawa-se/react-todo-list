@@ -24,7 +24,6 @@ export const todosSlice = createSlice({
         editTodo: (state, action) => {
             const { no, rest } = action.payload;
             const todoIndex = state.data.findIndex((todo) => todo.no === no);
-            console.log("todoIndex ",todoIndex)
             state.data[todoIndex] = action.payload;
         },
 

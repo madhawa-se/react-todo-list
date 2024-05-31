@@ -11,10 +11,7 @@ interface IFormProps {
 }
 
 const TodoForm = ({ onSubmitCallback, edit = false, todo }: IFormProps) => {
-    console.log("xx todo ", todo, edit, {
-        no: todo?.no,
-        title: todo?.title
-    });
+
 
     const { register, handleSubmit, setValue, formState: { errors }, reset } = useForm<Itodo>({
         defaultValues: {

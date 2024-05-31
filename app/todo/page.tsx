@@ -6,7 +6,7 @@ import TodoItem from "@/components/todo-Item";
 import { useAppDispatch, useAppSelector } from "@/lib/hooks";
 import { Itodo } from "@/models/todo-interface";
 import { todosSlice } from "@/store/slice/todo-slice";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import "./page.scss"
 
 const TodoPage = () => {
@@ -38,20 +38,23 @@ const TodoPage = () => {
     dispatch(todosSlice.actions.editTodo(data));
   }
 
-  function toggle(data: Itodo): void {
-    dispatch(todosSlice.actions.editTodo({...data,status:!data.status}));
-  }
+  const toggle = useCallback((todo:Itodo) => {
+    dispatch(todosSlice.actions.editTodo({
+      ...todo,
+      status: !todo.status
+    }));
+  }, [dispatch]);
 
-  function deleteTodo(todo: Itodo): void {
+  const deleteTodo = useCallback((todo:Itodo) => {
     dispatch(todosSlice.actions.deleteTodo(todo.no));
-  }
+  }, [dispatch]);
 
-  function onEdit(todo: Itodo): void {
+  const onEdit = useCallback((todo:Itodo) => {
     setIsEdit({
       show: true,
-      todo: todo
+      todo: todo,
     });
-  }
+  }, []);
 
   function openAddDialog(): void {
     setIsOpen(true);
