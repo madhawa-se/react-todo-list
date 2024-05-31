@@ -9,7 +9,11 @@ interface IState {
 }
 
 const initialState: IState = {
-    data: [],
+    data: [{
+        no:"id271",
+        status:true,
+        title:"Buy Groceries"
+    }],
     isLoading: false,
     error: null
 }
